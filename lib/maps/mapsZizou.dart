@@ -18,6 +18,7 @@ class MapsZizou extends StatelessWidget {
     return BonfireTiledWidget(showCollisionArea: true,
     collisionAreaColor: Colors.pink,
     constructionMode: true,
+    
       joystick: Joystick(
         keyboardConfig: KeyboardConfig(),
         directional: JoystickDirectional(),
