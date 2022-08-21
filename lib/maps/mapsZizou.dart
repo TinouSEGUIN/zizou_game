@@ -8,6 +8,6 @@ class MapsZizou extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BonfireTiledWidget(map: TiledWorldMap('maps/testMap2.json'));
+    return BonfireTiledWidget(map: TiledWorldMap('maps/map_sand1.json'));
   }
 }
