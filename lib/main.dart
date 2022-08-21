@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:zizou_game/maps/mapszizou.dart';
 import './maps/map1.dart';
 import './player/sprite_sheet_hero.dart';
 
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       home: LayoutBuilder(builder: (context, constraints) {
         tileSize = max(constraints.maxHeight, constraints.maxWidth) / 30;
         print(tileSize);
-        return Map1();
+        return MapsZizou();
       }),
     );
   }
