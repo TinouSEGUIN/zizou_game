@@ -36,7 +36,7 @@ class GamePlayer extends SimplePlayer with ObjectCollision {
           speed: sizePlayer * 2,
         ) {
     setupCollision(
-      CollisionConfig(
+      CollisionConfig(enable: true,
         collisions: [
           CollisionArea.rectangle(
             size: Vector2(sizePlayer * 0.5, sizePlayer / 3),
@@ -46,7 +46,7 @@ class GamePlayer extends SimplePlayer with ObjectCollision {
       ),
     );
   }
-
+  
   @override
   void joystickChangeDirectional(JoystickDirectionalEvent event) {
     if (event.directional != JoystickMoveDirectional.IDLE) {
@@ -75,6 +75,13 @@ class GamePlayer extends SimplePlayer with ObjectCollision {
       canvas.restore();
     }
   }
+
+  @override
+  bool onCollision(GameComponent component, bool active) {
+    print(component.toString());
+    return super.onCollision(component, active);
+  }
+  
 
   // bool tileIsWater() {
   //   return tileTypesBelow() == 'water';

@@ -9,6 +9,7 @@ import '../util/extensions.dart';
 
 class Map1 extends StatelessWidget {
   final ShowInEnum showInEnum;
+  
 
   const Map1({Key? key, this.showInEnum = ShowInEnum.left}) : super(key: key);
   @override
