@@ -19,4 +19,10 @@ class ExitMapSensor extends GameDecoration with Sensor {
       exitMap(id);
     }
   }
+  void onContactExit(collision) {
+    if (!hasContact && collision is Player) {
+      hasContact = true;
+      exitMap(id);
+    }
+  }
 }

@@ -1,6 +1,6 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
-import 'package:multibiomegame/main.dart';
+import '../main.dart';
 
 class GamePlayer extends SimplePlayer with ObjectCollision {
   static final sizePlayer = tileSize * 1.5;
@@ -53,7 +53,7 @@ class GamePlayer extends SimplePlayer with ObjectCollision {
       speed = (baseSpeed * (isWater ? 0.5 : 1)) * event.intensity;
     }
     super.joystickChangeDirectional(event);
-    isWater = tileIsWater();
+    // isWater = tileIsWater();
   }
 
   @override
@@ -76,5 +76,7 @@ class GamePlayer extends SimplePlayer with ObjectCollision {
     }
   }
 
-  bool tileIsWater() => tileTypeBelow() == 'water';
+  // bool tileIsWater() {
+  //   return tileTypesBelow() == 'water';
+  // }
 }

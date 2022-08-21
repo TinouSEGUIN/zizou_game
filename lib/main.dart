@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:multibiomegame/maps/map1.dart';
-import 'package:multibiomegame/player/sprite_sheet_hero.dart';
+import './maps/map1.dart';
+import './player/sprite_sheet_hero.dart';
 
 double tileSize = 32.0;
 void main() async {

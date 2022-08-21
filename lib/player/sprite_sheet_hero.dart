@@ -14,5 +14,5 @@ class SpriteSheetHero {
     );
   }
 
-  static SpriteSheet hero1;
+  static late SpriteSheet hero1;
 }
