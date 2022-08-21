@@ -1,11 +1,11 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
-import 'package:multibiomegame/main.dart';
-import 'package:multibiomegame/maps/map2.dart';
-import 'package:multibiomegame/player/game_player.dart';
-import 'package:multibiomegame/player/sprite_sheet_hero.dart';
-import 'package:multibiomegame/util/exit_map_sensor.dart';
-import 'package:multibiomegame/util/extensions.dart';
+import '../main.dart';
+import '../maps/map2.dart';
+import '../player/game_player.dart';
+import '../player/sprite_sheet_hero.dart';
+import '../util/exit_map_sensor.dart';
+import '../util/extensions.dart';
 
 class Map1 extends StatelessWidget {
   final ShowInEnum showInEnum;
