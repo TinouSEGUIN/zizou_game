@@ -235,7 +235,7 @@
                  "gid":9,
                  "height":256,
                  "id":24,
-                 "name":"tree_1",
+                 "name":"tree_2",
                  "rotation":0,
                  "visible":true,
                  "width":128,
@@ -251,8 +251,8 @@
                  "rotation":0,
                  "visible":true,
                  "width":128,
-                 "x":294,
-                 "y":752
+                 "x":322,
+                 "y":876
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -282,7 +282,7 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":9,
+ "nextlayerid":10,
  "nextobjectid":26,
  "orientation":"orthogonal",
  "renderorder":"right-down",
