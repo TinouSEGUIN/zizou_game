@@ -1,0 +1,15 @@
+{ "columns":2,
+ "image":"texture_dirt.png",
+ "imageheight":64,
+ "imagewidth":64,
+ "margin":0,
+ "name":"tileset_dirt",
+ "spacing":0,
+ "tilecount":4,
+ "tiledversion":"1.9.1",
+ "tileheight":32,
+ "tilewidth":32,
+ "transparentcolor":"#ffffff",
+ "type":"tileset",
+ "version":"1.8"
+}

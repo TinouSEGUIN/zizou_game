@@ -28,23 +28,47 @@
                 "y": 160.11147001076702
             }
         },
+        "E:/tmp/bonfire-master/example/assets/images/tiled/tileset/0x72_DungeonTilesetII_v1.json": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/tmp/bonfire-master/example/assets/images/tiled/tileset/tileset1.8.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "E:/tmp/bonfire-master/example/assets/images/tiled/top_down/map.json": {
+            "expandedObjectLayers": [
+                5,
+                3
+            ],
             "scale": 0.6167578125,
             "selectedLayer": 4,
             "viewCenter": {
                 "x": 620.1786053581608,
-                "y": 896.6242320602953
+                "y": 895.0028500855027
+            }
+        },
+        "E:/tmp/bonfire-master/example/assets/images/tiled/top_down/tilesheet.json": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "images/maps/map_jungle.json": {
+            "scale": 0.125,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 2892,
+                "y": 656
             }
         },
         "images/maps/map_sand.json": {
             "expandedGroupLayers": [
                 9
             ],
-            "scale": 0.5,
-            "selectedLayer": 3,
+            "scale": 0.125,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 753,
-                "y": 724
+                "x": 2644,
+                "y": 1384
             }
         },
         "images/maps/map_sand.tmj": {
@@ -62,6 +86,9 @@
                 "x": 2403.679100664282,
                 "y": 1925.3960143076135
             }
+        },
+        "images/maps/tileset_collisions.json": {
+            "scaleInEditor": 1
         },
         "images/maps/tileset_jungle.json": {
             "scaleInDock": 1,
@@ -87,6 +114,9 @@
             "scaleInDock": 0.25,
             "scaleInEditor": 1
         },
+        "images/maps/tileset_tree4.json": {
+            "scaleInEditor": 1
+        },
         "images/maps/tileset_trees.json": {
             "scaleInDock": 0.5,
             "scaleInEditor": 1
@@ -109,9 +139,9 @@
         }
     },
     "last.imagePath": "C:/Users/maxim/Desktop/Projets/Gamejam/zizou_game/assets/images/maps",
-    "map.height": 100,
+    "map.height": 60,
     "map.lastUsedFormat": "json",
-    "map.width": 150,
+    "map.width": 80,
     "openFiles": [
         "images/maps/map_sand.json",
         "images/maps/tileset_sand.json",
@@ -124,18 +154,18 @@
     "project": "zizou.tiled-project",
     "property.type": "object",
     "recentFiles": [
+        "images/maps/tileset_jungle.json",
+        "E:/tmp/bonfire-master/example/assets/images/tiled/tileset/tileset1.8.tsj",
+        "E:/tmp/bonfire-master/example/assets/images/tiled/top_down/map.json",
+        "E:/tmp/bonfire-master/example/assets/images/tiled/top_down/tilesheet.json",
+        "E:/tmp/bonfire-master/example/assets/images/tiled/map_tiled1.8.tmj",
+        "E:/tmp/bonfire-master/example/assets/images/tiled/bigMap.json",
         "images/maps/tileset_sand.json",
         "images/maps/tileset_sea.json",
-        "images/maps/tileset_jungle.json",
         "images/maps/tileset_tree1.json",
         "images/maps/tileset_tree2.json",
-        "images/maps/tileset_zizi.json",
-        "images/maps/map_sand.json",
-        "images/maps/tileset_tree3.json",
-        "images/maps/tileset_trees.json",
-        "images/maps/map_sand.tmj",
-        "images/tilesets/sea1.json",
-        "images/maps/map_sand.tmx"
+        "images/maps/tileset_tree4.json",
+        "images/maps/tileset_tree3.json"
     ],
     "tileset.lastUsedFormat": "json",
     "tileset.tileSize": {

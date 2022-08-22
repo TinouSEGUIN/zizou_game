@@ -1,0 +1,15 @@
+{ "columns":1,
+ "image":"texture_grass3D.png",
+ "imageheight":32,
+ "imagewidth":32,
+ "margin":0,
+ "name":"tileset_grass3D",
+ "spacing":0,
+ "tilecount":1,
+ "tiledversion":"1.9.1",
+ "tileheight":32,
+ "tilewidth":32,
+ "transparentcolor":"#ffffff",
+ "type":"tileset",
+ "version":"1.8"
+}
