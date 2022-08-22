@@ -3,7 +3,10 @@ import 'dart:math';
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:zizou_game/maps/mapszizou.dart';
+import 'package:zizou_game/providers/book_provider.dart';
+import 'package:zizou_game/providers/items_provider.dart';
 import 'package:zizou_game/screens/main_title_screen.dart';
 import './maps/map1.dart';
 import './player/sprite_sheet_hero.dart';
@@ -14,7 +17,7 @@ void main() async {
   await SpriteSheetHero.load();
   if (!kIsWeb) {
     await Flame.device.setLandscape();
-    await Flame.device.fullScreen(); 
+    await Flame.device.fullScreen();
   }
   runApp(MyApp());
 }
@@ -29,18 +32,29 @@ enum ShowInEnum {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'ZizouGame',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<BookProvider>(
+          create: (_) => BookProvider(),
+        ),
+        ChangeNotifierProvider<ItemProvider>(
+          create: (_) => ItemProvider(),
+        ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'ZizouGame',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        home: LayoutBuilder(builder: (context, constraints) {
+          tileSize = max(constraints.maxHeight, constraints.maxWidth) / 30;
+          print(tileSize);
+          // return MapsZizou();
+          return TitleScreen();
+        }),
       ),
-      home: LayoutBuilder(builder: (context, constraints) {
-        tileSize = max(constraints.maxHeight, constraints.maxWidth) / 30;
-        print(tileSize);
-        // return MapsZizou();
-        return TitleScreen();
-      }),
     );
   }
 }
