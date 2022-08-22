@@ -10,22 +10,21 @@ import '../interface/maps_interface.dart';
 import '../player/game_player.dart';
 import '../player/sprite_sheet_hero.dart';
 
-
 class MapsZizou extends StatelessWidget {
   final ShowInEnum showInEnum;
-  const MapsZizou({Key? key, this.showInEnum = ShowInEnum.left}) : super(key: key);
+  const MapsZizou({Key? key, this.showInEnum = ShowInEnum.left})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return BonfireTiledWidget(showCollisionArea: true,
-    collisionAreaColor: Colors.pink,
-    constructionMode: true,
-    initialActiveOverlays: ['interface'],
-        overlayBuilderMap: {
-          'interface': (_, game) => MapInterface(),
-        },
-    
-    
+    return BonfireTiledWidget(
+      showCollisionArea: true,
+      collisionAreaColor: Colors.pink,
+      constructionMode: true,
+      initialActiveOverlays: ['interface'],
+      overlayBuilderMap: {
+        'interface': (_, game) => MapInterface(),
+      },
       joystick: Joystick(
         keyboardConfig: KeyboardConfig(),
         directional: JoystickDirectional(),

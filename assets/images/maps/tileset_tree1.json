@@ -1,10 +1,4 @@
 { "columns":1,
- "grid":
-    {
-     "height":32,
-     "orientation":"orthogonal",
-     "width":32
-    },
  "image":"texture_tree1.png",
  "imageheight":256,
  "imagewidth":128,

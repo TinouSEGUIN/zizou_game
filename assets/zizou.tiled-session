@@ -6,17 +6,17 @@
     "activeFile": "images/maps/map_sand.json",
     "expandedProjectPaths": [
         "images/tilesets",
-        "images/maps",
         ".",
-        "images"
+        "images",
+        "images/maps"
     ],
     "fileStates": {
         "images/maps/map_sand.json": {
-            "scale": 0.33,
-            "selectedLayer": 1,
+            "scale": 0.75,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 1013.6363636363635,
-                "y": 1148.4848484848485
+                "x": 836.6666666666667,
+                "y": 1137.3333333333335
             }
         },
         "images/maps/map_sand.tmj": {
@@ -56,7 +56,7 @@
             "scaleInEditor": 1
         },
         "images/maps/tileset_tree3.json": {
-            "scaleInDock": 1,
+            "scaleInDock": 0.25,
             "scaleInEditor": 1
         },
         "images/maps/tileset_trees.json": {
@@ -93,13 +93,13 @@
     "project": "zizou.tiled-project",
     "property.type": "object",
     "recentFiles": [
-        "images/maps/map_sand.json",
         "images/maps/tileset_tree3.json",
         "images/maps/tileset_tree2.json",
         "images/maps/tileset_tree1.json",
         "images/maps/tileset_jungle.json",
         "images/maps/tileset_sea.json",
         "images/maps/tileset_sand.json",
+        "images/maps/map_sand.json",
         "images/maps/tileset_trees.json",
         "images/maps/map_sand.tmj",
         "images/tilesets/sea1.json",
