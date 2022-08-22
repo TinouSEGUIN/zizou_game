@@ -1,4 +1,5 @@
 import 'dart:js';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -28,35 +29,91 @@ class MapInterface extends StatelessWidget {
     //TODO good value corresponding on OS
     double height =
         constraints.maxHeight < 500 ? constraints.maxHeight : 500; //threshold
-    double width =
-        constraints.maxWidth < 500 ? constraints.maxWidth : 500; //threshold
+    double width = constraints.maxWidth < 500
+        ? constraints.maxWidth * 0.2
+        : 500 * 0.25; //threshold
 
     return Align(
-      alignment: Alignment.topRight.add(Alignment(0.0, 0.1)),
+      alignment: Alignment.topRight,
       child: SizedBox(
         height: height,
         width: width,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              IconButton(
-                onPressed: () async {
-                  await showBookClue(context);
-                },
-                tooltip: 'Clue',
-                icon: Icon(
-                  Icons.search,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(
+                    sigmaX: 2,
+                    sigmaY: 2,
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.brown[600]?.withOpacity(0.5),
+                    ),
+                    child: GestureDetector(
+
+                        // color: Colors.pink,
+                        // splashColor: Colors.transparent,
+
+                        onTap: () async {
+                          await showBookClue(context);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Icon(
+                                Icons.search,
+                              ),
+                              Text("Clue Book")
+                            ],
+                          ),
+                        )),
+                  ),
                 ),
               ),
-              IconButton(
-                onPressed: () {},
-                tooltip: 'Maps',
-                icon: Icon(
-                  Icons.map,
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical : 4.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(
+                      sigmaX: 2,
+                      sigmaY: 2,
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.brown[600]?.withOpacity(0.5),
+                      ),
+                      child: GestureDetector(
+
+                          // color: Colors.pink,
+                          // splashColor: Colors.transparent,
+
+                          onTap: () {},
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                Icon(
+                        Icons.map,
+                      ),
+                                Text("Map"),
+                              ],
+                            ),
+                          )),
+                    ),
+                  ),
                 ),
               ),
+             
             ],
           ),
         ),
@@ -78,18 +135,22 @@ class MapInterface extends StatelessWidget {
           ),
         ),
         body: Container(
-          decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/notebook.png'),),),
-          //TODO gridview from the enums 
-        //     child: Column(
-        //   children: [
-        //     GridView(gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 150.0, childAspectRatio: 2.0 ), children: ),
-        //     Divider(),
-        //     GridView(gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 150.0, childAspectRatio: 2.0 )),
-        //     Divider(),
-        //     GridView(gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 150.0, childAspectRatio: 2.0 )),
-        //     Divider(),
-        //   ],
-        // ),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('images/notebook.png'),
+            ),
+          ),
+          //TODO gridview from the enums
+          //     child: Column(
+          //   children: [
+          //     GridView(gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 150.0, childAspectRatio: 2.0 ), children: ),
+          //     Divider(),
+          //     GridView(gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 150.0, childAspectRatio: 2.0 )),
+          //     Divider(),
+          //     GridView(gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 150.0, childAspectRatio: 2.0 )),
+          //     Divider(),
+          //   ],
+          // ),
         ),
       ),
     );
@@ -103,46 +164,55 @@ class MapInterface extends StatelessWidget {
         constraints.maxWidth < 500 ? constraints.maxWidth : 500; //threshold
     return Align(
       alignment: Alignment.bottomCenter,
-      child: Container(
-          decoration: BoxDecoration(color: Colors.grey.withOpacity(0.5)),
-          height: height,
-          width: width,
-          child: Consumer<ItemProvider>(
-            builder: (context, itemProvider, child) {
-              return Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  // Mad for debug
-                  InkWell(
-                    onDoubleTap: () => itemProvider.toggleCoupeCoupe(),
-                    child: FaIcon(
-                      FontAwesomeIcons.utensils,
-                      color: itemProvider.FoudedCoupeCoupe
-                          ? Colors.red
-                          : Colors.black,
-                    ),
-                  ),
-                  InkWell(
-                    onDoubleTap: () => itemProvider.toggleFoundedRope(),
-                    child: FaIcon(
-                      FontAwesomeIcons.trowel,
-                      color:
-                          itemProvider.FoudedRope ? Colors.amber : Colors.black,
-                    ),
-                  ),
-                  InkWell(
-                    onDoubleTap: () => itemProvider.toggleFoundedFire(),
-                    child: FaIcon(
-                      FontAwesomeIcons.fire,
-                      color: itemProvider.FoudedFire
-                          ? Colors.deepOrange
-                          : Colors.black,
-                    ),
-                  ),
-                ],
-              );
-            },
-          )),
+      child: ClipRRect(
+        child: BackdropFilter(
+          filter: ImageFilter.blur(
+            sigmaX: 2,
+            sigmaY: 2,
+          ),
+          child: Container(
+              decoration: BoxDecoration(color: Colors.grey.withOpacity(0.5)),
+              height: height,
+              width: width,
+              child: Consumer<ItemProvider>(
+                builder: (context, itemProvider, child) {
+                  return Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      // Mad for debug
+                      InkWell(
+                        onDoubleTap: () => itemProvider.toggleCoupeCoupe(),
+                        child: FaIcon(
+                          FontAwesomeIcons.utensils,
+                          color: itemProvider.FoudedCoupeCoupe
+                              ? Colors.red
+                              : Colors.black,
+                        ),
+                      ),
+                      InkWell(
+                        onDoubleTap: () => itemProvider.toggleFoundedRope(),
+                        child: FaIcon(
+                          FontAwesomeIcons.trowel,
+                          color: itemProvider.FoudedRope
+                              ? Colors.amber
+                              : Colors.black,
+                        ),
+                      ),
+                      InkWell(
+                        onDoubleTap: () => itemProvider.toggleFoundedFire(),
+                        child: FaIcon(
+                          FontAwesomeIcons.fire,
+                          color: itemProvider.FoudedFire
+                              ? Colors.deepOrange
+                              : Colors.black,
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              )),
+        ),
+      ),
     );
   }
 
