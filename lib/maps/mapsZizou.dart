@@ -36,7 +36,7 @@ class MapsZizou extends StatelessWidget {
         initDirection: _getDirection(),
       ),
       map: TiledWorldMap(
-        'maps/map_sand1.json',
+        'maps/map_sand.json',
       ),
     );
   }
