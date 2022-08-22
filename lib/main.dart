@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
           tileSize = max(constraints.maxHeight, constraints.maxWidth) / 30;
           print(tileSize);
           // return MapsZizou();
-          return MapsZizou();
+          return MapsZizou(tileSize);
         }),
       ),
     );

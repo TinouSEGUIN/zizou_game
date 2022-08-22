@@ -11,23 +11,22 @@ import '../interface/maps_interface.dart';
 import '../player/game_player.dart';
 import '../player/sprite_sheet_hero.dart';
 
-
 class MapsZizou extends StatelessWidget {
   final ShowInEnum showInEnum;
-  const MapsZizou({Key? key, this.showInEnum = ShowInEnum.left}) : super(key: key);
+  double tileSize;
+  MapsZizou(double this.tileSize, {Key? key, this.showInEnum = ShowInEnum.left})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BonfireTiledWidget(
       showCollisionArea: true,
-    collisionAreaColor: Colors.pink,
-    constructionMode: true,
-    initialActiveOverlays: ['interface'],
-        overlayBuilderMap: {
-          'interface': (_, game) => MapInterface(),
-        },
-    
-    
+      collisionAreaColor: Colors.pink,
+      constructionMode: true,
+      initialActiveOverlays: ['interface'],
+      overlayBuilderMap: {
+        'interface': (_, game) => MapInterface(),
+      },
       joystick: Joystick(
         keyboardConfig: KeyboardConfig(),
         directional: JoystickDirectional(),
@@ -37,13 +36,23 @@ class MapsZizou extends StatelessWidget {
         SpriteSheetHero.hero1,
         initDirection: _getDirection(),
       ),
-      map: TiledWorldMap(
-        'maps/map_sand.json',
-        objectsBuilder: {
-          'tree_2' : (properties) => MyEnemy(properties.position),
-          'tree_1' : (properties) => MyEnemy(properties.position),
-        }
+      cameraConfig: CameraConfig(
+        smoothCameraEnabled: true,
+        smoothCameraSpeed: 2,
       ),
+      map: TiledWorldMap('maps/map_sand.json',
+          forceTileSize: Size(tileSize, tileSize),
+          objectsBuilder: {
+            'tree_2': (properties) {
+              print('tree2  pos : ${properties.position} size : ${properties.size}');
+              return GameDecoration.withSprite(position: properties.position, size: properties.size, sprite: Sprite.load('maps/texture_tree2.png'));
+            },
+            'tree_1': (properties) {
+              print('tree1  pos : ${properties.position} size : ${properties.size}');
+              return GameDecoration.withSprite(position: properties.position, size: properties.size, sprite: Sprite.load('maps/texture_tree1.png'));
+            },
+            
+          }),
     );
   }
 

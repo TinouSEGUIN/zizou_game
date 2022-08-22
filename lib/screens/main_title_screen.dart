@@ -47,7 +47,7 @@ class TitleScreen extends StatelessWidget {
                           style: Theme.of(context).textTheme.headline1,
                         )),
                         // style: ,
-                        onPressed: () => context.goTo(MapsZizou()),
+                        onPressed: () => context.goTo(MapsZizou(32)),
                       ),
                     ),
                     Spacer(
@@ -114,7 +114,7 @@ class TitleScreen extends StatelessWidget {
                             style: Theme.of(context).textTheme.headline1,
                           )),
                           // style: ,
-                          onPressed: () => context.goTo(MapsZizou()),
+                          onPressed: () => context.goTo(MapsZizou(32)),
                         ),
                       ),
                       Spacer(
