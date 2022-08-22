@@ -10,16 +10,41 @@
         "images",
         "images/maps"
     ],
+    "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "E:/tmp/bonfire-master/example/assets/images/tiled/bigMap.json": {
+            "scale": 0.33,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 722.7272727272726,
+                "y": 790.9090909090909
+            }
+        },
+        "E:/tmp/bonfire-master/example/assets/images/tiled/map_tiled1.8.tmj": {
+            "scale": 2.46703125,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 160.31414275761608,
+                "y": 160.11147001076702
+            }
+        },
+        "E:/tmp/bonfire-master/example/assets/images/tiled/top_down/map.json": {
+            "scale": 0.6167578125,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 620.1786053581608,
+                "y": 896.6242320602953
+            }
+        },
         "images/maps/map_sand.json": {
             "expandedGroupLayers": [
                 9
             ],
             "scale": 0.5,
-            "selectedLayer": 1,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 371,
-                "y": 720
+                "x": 753,
+                "y": 724
             }
         },
         "images/maps/map_sand.tmj": {

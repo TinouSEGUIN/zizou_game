@@ -43,15 +43,14 @@ class MapsZizou extends StatelessWidget {
       map: TiledWorldMap('maps/map_sand.json',
           forceTileSize: Size(tileSize, tileSize),
           objectsBuilder: {
-            'tree_2': (properties) {
-              print('tree2  pos : ${properties.position} size : ${properties.size}');
-              return GameDecoration.withSprite(position: properties.position, size: properties.size, sprite: Sprite.load('maps/texture_tree2.png'));
-            },
-            'tree_1': (properties) {
-              print('tree1  pos : ${properties.position} size : ${properties.size}');
-              return GameDecoration.withSprite(position: properties.position, size: properties.size, sprite: Sprite.load('maps/texture_tree1.png'));
-            },
-            
+            'tree1': (properties) {
+              print(
+                  'tree1  pos : ${properties.position} size : ${properties.size}');
+              return GameDecoration.withSprite(
+                  position: properties.position,
+                  size: properties.size,
+                  sprite: Sprite.load('maps/texture_tree1.png'));
+            }
           }),
     );
   }
