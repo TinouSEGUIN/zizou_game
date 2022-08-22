@@ -19,6 +19,7 @@ class MapsZizou extends StatelessWidget {
     collisionAreaColor: Colors.pink,
     constructionMode: true,
     
+    
       joystick: Joystick(
         keyboardConfig: KeyboardConfig(),
         directional: JoystickDirectional(),
