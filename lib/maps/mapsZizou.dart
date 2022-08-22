@@ -3,6 +3,7 @@ import 'package:bonfire/tiled/tiled_world_map.dart';
 import 'package:bonfire/widgets/bonfire_tiled_widget.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:zizou_game/interface/tree_objects.dart';
 import 'package:zizou_game/main.dart';
 import 'package:flutter/material.dart';
 
@@ -10,21 +11,23 @@ import '../interface/maps_interface.dart';
 import '../player/game_player.dart';
 import '../player/sprite_sheet_hero.dart';
 
+
 class MapsZizou extends StatelessWidget {
   final ShowInEnum showInEnum;
-  const MapsZizou({Key? key, this.showInEnum = ShowInEnum.left})
-      : super(key: key);
+  const MapsZizou({Key? key, this.showInEnum = ShowInEnum.left}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BonfireTiledWidget(
       showCollisionArea: true,
-      collisionAreaColor: Colors.pink,
-      constructionMode: true,
-      initialActiveOverlays: ['interface'],
-      overlayBuilderMap: {
-        'interface': (_, game) => MapInterface(),
-      },
+    collisionAreaColor: Colors.pink,
+    constructionMode: true,
+    initialActiveOverlays: ['interface'],
+        overlayBuilderMap: {
+          'interface': (_, game) => MapInterface(),
+        },
+    
+    
       joystick: Joystick(
         keyboardConfig: KeyboardConfig(),
         directional: JoystickDirectional(),
@@ -36,6 +39,10 @@ class MapsZizou extends StatelessWidget {
       ),
       map: TiledWorldMap(
         'maps/map_sand.json',
+        objectsBuilder: {
+          'tree_2' : (properties) => MyEnemy(properties.position),
+          'tree_1' : (properties) => MyEnemy(properties.position),
+        }
       ),
     );
   }
