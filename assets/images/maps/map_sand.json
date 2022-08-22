@@ -227,6 +227,41 @@
         }, 
         {
          "draworder":"topdown",
+         "id":8,
+         "name":"treeObject",
+         "objects":[
+                {
+                 "class":"Tree",
+                 "gid":9,
+                 "height":256,
+                 "id":24,
+                 "name":"tree_1",
+                 "rotation":0,
+                 "visible":true,
+                 "width":128,
+                 "x":306,
+                 "y":592
+                }, 
+                {
+                 "class":"Tree",
+                 "gid":9,
+                 "height":256,
+                 "id":25,
+                 "name":"tree_1",
+                 "rotation":0,
+                 "visible":true,
+                 "width":128,
+                 "x":294,
+                 "y":752
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
          "id":2,
          "name":"sensor",
          "objects":[
@@ -247,8 +282,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":8,
- "nextobjectid":24,
+ "nextlayerid":9,
+ "nextobjectid":26,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.1",
