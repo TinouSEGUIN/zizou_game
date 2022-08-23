@@ -65,6 +65,7 @@ flutter:
     - assets/images/hero1.png
     - assets/images/background_from_AI.jpg
     - assets/images/notebook.png
+    - assets/images/radio_sheet.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

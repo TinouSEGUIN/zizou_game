@@ -8,7 +8,7 @@ import 'package:zizou_game/maps/mapsZizou.dart';
 import 'package:zizou_game/providers/book_provider.dart';
 import 'package:zizou_game/providers/items_provider.dart';
 import 'package:zizou_game/screens/main_title_screen.dart';
-import './maps/map1.dart';
+
 import './player/sprite_sheet_hero.dart';
 
 double tileSize = 32.0;

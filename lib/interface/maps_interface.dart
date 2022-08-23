@@ -1,14 +1,33 @@
 import 'dart:js';
 import 'dart:ui';
 
+import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/items_provider.dart';
 
-class MapInterface extends StatelessWidget {
-  const MapInterface({Key? key}) : super(key: key);
+class MapInterface extends StatefulWidget {
+  FocusNode gamefocus;
+  MapInterface(this.gamefocus, {Key? key});
+
+  @override
+  State<MapInterface> createState() => _MapInterfaceState();
+}
+
+class _MapInterfaceState extends State<MapInterface> {
+  // FocusNode _focusNode;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +44,7 @@ class MapInterface extends StatelessWidget {
     );
   }
 
+  // @override
   Widget _topRightMenu(BuildContext context, BoxConstraints constraints) {
     //TODO good value corresponding on OS
     double height =
@@ -61,6 +81,7 @@ class MapInterface extends StatelessWidget {
                         // splashColor: Colors.transparent,
 
                         onTap: () async {
+                          FocusScope.of(context).requestFocus(widget.gamefocus);
                           await showBookClue(context);
                         },
                         child: Padding(
@@ -79,7 +100,7 @@ class MapInterface extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical : 4.0),
+                padding: const EdgeInsets.symmetric(vertical: 4.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: BackdropFilter(
@@ -96,15 +117,17 @@ class MapInterface extends StatelessWidget {
                           // color: Colors.pink,
                           // splashColor: Colors.transparent,
 
-                          onTap: () {},
+                          onTap: () {
+                            Focus.of(context).unfocus();
+                          },
                           child: Padding(
                             padding: const EdgeInsets.all(4.0),
                             child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
                                 Icon(
-                        Icons.map,
-                      ),
+                                  Icons.map,
+                                ),
                                 Text("Map"),
                               ],
                             ),
@@ -113,7 +136,6 @@ class MapInterface extends StatelessWidget {
                   ),
                 ),
               ),
-             
             ],
           ),
         ),
@@ -181,7 +203,10 @@ class MapInterface extends StatelessWidget {
                     children: [
                       // Mad for debug
                       InkWell(
-                        onDoubleTap: () => itemProvider.toggleCoupeCoupe(),
+                        onDoubleTap: () {
+                          FocusScope.of(context).requestFocus(widget.gamefocus);
+                          itemProvider.toggleCoupeCoupe();
+                        },
                         child: FaIcon(
                           FontAwesomeIcons.utensils,
                           color: itemProvider.FoudedCoupeCoupe
@@ -215,9 +240,4 @@ class MapInterface extends StatelessWidget {
       ),
     );
   }
-
-//  Widget gridListClue(List clues){
-//    //todo Proper gridviews with enums
-//   //  return GridView(gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 150.0, childAspectRatio: 2.0 ), children: clues.map((e) => GridTile(child: Text(e.))).toList());
-//  }
 }

@@ -57,6 +57,12 @@ class GamePlayer extends SimplePlayer with ObjectCollision {
   }
 
   @override
+  void update(double dt) {
+    // print(this.position.toString());
+    super.update(dt);
+  }
+
+  @override
   void render(Canvas canvas) {
     if (isWater) {
       canvas.saveLayer(toRect(), Paint());
@@ -78,7 +84,7 @@ class GamePlayer extends SimplePlayer with ObjectCollision {
 
   @override
   bool onCollision(GameComponent component, bool active) {
-    print(component.toString());
+    print(component.properties?.values);
     return super.onCollision(component, active);
   }
   

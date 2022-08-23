@@ -14,15 +14,26 @@ class ExitMapSensor extends GameDecoration with Sensor {
 
   @override
   void onContact(collision) {
-    if (!hasContact && collision is Player) {
-      hasContact = true;
-      exitMap(id);
+    if (collision is Player) {
+      if (!hasContact) {
+        hasContact = true;
+        exitMap(id);
+      }
+      print('onCollision');
+      Future.delayed(Duration(seconds: 3)).then((value) {
+        hasContact = false;
+      });
     }
   }
+
   void onContactExit(collision) {
-    if (!hasContact && collision is Player) {
-      hasContact = true;
-      exitMap(id);
+    if (collision is Player) {
+      if (!hasContact) {
+        hasContact = true;
+        exitMap(id);
+      }
+      print('onCollisionExit');
+
     }
   }
 }
