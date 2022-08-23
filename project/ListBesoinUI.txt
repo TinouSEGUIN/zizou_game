@@ -1,0 +1,26 @@
+Personnage : 
+    * Hero (Animated)
+    * 
+    * Main Title : 
+    * Title (Animated)
+    * Background(Animated?)
+    * ButtonMainTitle (Pressed & Unpressed)
+    * 
+    * Map UI General : 
+    * Button Clue and Map(Pressed & Unpressed)
+    * Clue Icon 
+    * Map Icon 
+    * Bottom Item Box 
+    * CoupeCoupe Icon
+    * Rope Icon 
+    * Fire Icon
+    * Dialogue Box 
+    * Dialogue Guy UI
+
+Map Sand Tiles : 
+    * Tree (animated)
+    * Sand 
+    * Forest 
+    * Sea (animated)
+    
+

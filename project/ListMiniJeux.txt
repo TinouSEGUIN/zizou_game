@@ -1,0 +1,16 @@
+Plage : 
+    * Peche
+
+
+Passage Plage <-> Jungle 
+    * CoupeCoupe Fruit ninja 
+
+Jungle :
+    * Moustique
+
+Passage Jungle <-> Montagne 
+    * Escalade
+
+Montagne : 
+    *
+
