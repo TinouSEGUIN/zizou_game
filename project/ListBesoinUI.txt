@@ -1,12 +1,12 @@
 Personnage : 
     * Hero (Animated)
     * 
-    * Main Title : 
+Main Title : 
     * Title (Animated)
     * Background(Animated?)
     * ButtonMainTitle (Pressed & Unpressed)
-    * 
-    * Map UI General : 
+
+Map UI General : 
     * Button Clue and Map(Pressed & Unpressed)
     * Clue Icon 
     * Map Icon 
@@ -20,7 +20,43 @@ Personnage :
 Map Sand Tiles : 
     * Tree (animated)
     * Sand 
-    * Forest 
+    * Forest/Jungle Border
     * Sea (animated)
     
+
+Map Jungle Tiles : 
+    * Tree2 (animated)
+    * Ground 
+    * Jungle 
+    * Montain Border
+    * Sand Border
+    
+
+Map Montains Tiles : 
+    * Buisson (animated)
+    * Ground Volcano
+    * Ground Balsam
+    * Jungle Border
+
+
+Object to find and in the Map (animated + UISprite): 
+    * Crabs
+    * Clown fish
+    * Baracuda fish
+    * Fungus fish
+    * Turtle 
+    * seastar
+    * Shark
+    * Snake
+    * Flower
+    * Colored Birds 
+    * Mango 
+    * Coconuts 
+    * Banana
+    * Eagle 
+    * Linx 
+    * Buisson only (UI sprites) 
+    * Ground Volcano (UI sprites)
+    * Ground Balsam (UI sprites)
+   
 
