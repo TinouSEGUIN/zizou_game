@@ -1,0 +1,7 @@
+animated text for dialogue : https://pub.dev/packages/animated_text_kit
+fonts :
+    * https://fonts.google.com/specimen/Silkscreen 
+    * https://fonts.google.com/specimen/DynaPuff
+    * https://fonts.google.com/specimen/Rubik+Dirt
+    * https://fonts.google.com/specimen/Chakra+Petch
+    * https://fonts.google.com/specimen/Press+Start+2P
