@@ -30,17 +30,28 @@ class MapsZizou extends StatelessWidget {
       overlayBuilderMap: {
         'interface': (context, game) => MapInterface(focusController),
       },
-      focusNode: focusController ,
-      joystick: Joystick(
-        keyboardConfig: KeyboardConfig(),
-        directional: JoystickDirectional(),
-        actions: [
-          // JoystickAction(
-          //   actionId: 'book',
-          //   sprite: Sprite.load('notebook.png'),
-          // )
-        ],
+      focusNode: focusController,
+      joystick: JoystickMoveToPosition(
+        enabledMoveCameraWithClick: true,
+        mouseButtonUsedToMoveToPosition: MouseButton.left,
+
       ),
+      // JoystickAction(
+      //   actionId: 'book',
+      //   sprite: Sprite.load('notebook.png'),
+      // )
+      // ],
+      // ),
+      // joystick: Joystick(
+      //   keyboardConfig: KeyboardConfig(keyboardDirectionalType: KeyboardDirectionalType.wasdAndArrows),
+      //   directional: JoystickDirectional(),
+      //   actions: [
+      //     // JoystickAction(
+      //     //   actionId: 'book',
+      //     //   sprite: Sprite.load('notebook.png'),
+      //     // )
+      //   ],
+      // ),
       player: GamePlayer(
         _getInitPosition(),
         SpriteSheetHero.hero1,
@@ -64,7 +75,7 @@ class MapsZizou extends StatelessWidget {
         //   }
         // }
       )..registerObject('sensourOut', (properties) {
-        print({properties.position.toString()});
+          print({properties.position.toString()});
           return ExitMapSensor(
             'sensorOut',
             properties.position,
@@ -80,7 +91,7 @@ class MapsZizou extends StatelessWidget {
   Vector2 _getInitPosition() {
     switch (showInEnum) {
       case ShowInEnum.left:
-        return Vector2(5011.652777777781,2107.2527777777814);
+        return Vector2(5011.652777777781, 2107.2527777777814);
         break;
       case ShowInEnum.right:
         return Vector2(tileSize * 27, tileSize * 12);

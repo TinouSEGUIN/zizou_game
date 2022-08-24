@@ -80,9 +80,9 @@ class _MapInterfaceState extends State<MapInterface> {
                         // color: Colors.pink,
                         // splashColor: Colors.transparent,
 
-                        onTap: () async {
-                          FocusScope.of(context).requestFocus(widget.gamefocus);
-                          await showBookClue(context);
+                        onTap: ()  {
+                          
+                          showBookClue(context).then((value) => FocusScope.of(context).requestFocus(widget.gamefocus));
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(4.0),
