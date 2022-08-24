@@ -3,12 +3,12 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "images/maps/map_sand.json",
+    "activeFile": "images/maps/treecanvas1.json",
     "expandedProjectPaths": [
-        "images/tilesets",
         ".",
-        "images",
-        "images/maps"
+        "images/tilesets",
+        "images/maps",
+        "images"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -64,11 +64,11 @@
             "expandedGroupLayers": [
                 9
             ],
-            "scale": 0.125,
-            "selectedLayer": 4,
+            "scale": 0.12,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 2644,
-                "y": 1384
+                "x": 3062.5000000000005,
+                "y": 1958.3333333333337
             }
         },
         "images/maps/map_sand.tmj": {
@@ -88,26 +88,27 @@
             }
         },
         "images/maps/tileset_collisions.json": {
+            "scaleInDock": 0.33,
             "scaleInEditor": 1
         },
         "images/maps/tileset_jungle.json": {
-            "scaleInDock": 1,
+            "scaleInDock": 0.33,
             "scaleInEditor": 1
         },
         "images/maps/tileset_sand.json": {
-            "scaleInDock": 1,
+            "scaleInDock": 0.33,
             "scaleInEditor": 1
         },
         "images/maps/tileset_sea.json": {
-            "scaleInDock": 1,
+            "scaleInDock": 0.33,
             "scaleInEditor": 1
         },
         "images/maps/tileset_tree1.json": {
-            "scaleInDock": 1,
+            "scaleInDock": 0.33,
             "scaleInEditor": 1
         },
         "images/maps/tileset_tree2.json": {
-            "scaleInDock": 1,
+            "scaleInDock": 0.33,
             "scaleInEditor": 1
         },
         "images/maps/tileset_tree3.json": {
@@ -115,6 +116,7 @@
             "scaleInEditor": 1
         },
         "images/maps/tileset_tree4.json": {
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "images/maps/tileset_trees.json": {
@@ -122,6 +124,15 @@
             "scaleInEditor": 1
         },
         "images/maps/tileset_zizi.json": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "images/maps/tree_canvas1.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "images/maps/treecanvas1.json": {
+            "scaleInDock": 0.33,
             "scaleInEditor": 1
         },
         "images/tilesets/jungle1.tsx": {
@@ -138,7 +149,7 @@
             "scaleInDock": 1
         }
     },
-    "last.imagePath": "C:/Users/maxim/Desktop/Projets/Gamejam/zizou_game/assets/images/maps",
+    "last.imagePath": "/Users/moiseseguin/development/Projects/zizou_game/assets/images/maps",
     "map.height": 60,
     "map.lastUsedFormat": "json",
     "map.width": 80,
@@ -149,23 +160,24 @@
         "images/maps/tileset_jungle.json",
         "images/maps/tileset_tree1.json",
         "images/maps/tileset_tree2.json",
-        "images/maps/tileset_tree3.json"
+        "images/maps/tileset_tree3.json",
+        "images/maps/treecanvas1.json"
     ],
     "project": "zizou.tiled-project",
     "property.type": "object",
     "recentFiles": [
-        "images/maps/tileset_jungle.json",
-        "E:/tmp/bonfire-master/example/assets/images/tiled/tileset/tileset1.8.tsj",
-        "E:/tmp/bonfire-master/example/assets/images/tiled/top_down/map.json",
-        "E:/tmp/bonfire-master/example/assets/images/tiled/top_down/tilesheet.json",
-        "E:/tmp/bonfire-master/example/assets/images/tiled/map_tiled1.8.tmj",
-        "E:/tmp/bonfire-master/example/assets/images/tiled/bigMap.json",
+        "images/maps/map_sand.json",
         "images/maps/tileset_sand.json",
         "images/maps/tileset_sea.json",
+        "images/maps/tileset_jungle.json",
         "images/maps/tileset_tree1.json",
         "images/maps/tileset_tree2.json",
-        "images/maps/tileset_tree4.json",
-        "images/maps/tileset_tree3.json"
+        "images/maps/tileset_tree3.json",
+        "images/maps/treecanvas1.json",
+        "images/maps/tree_canvas1.tsj",
+        "E:/tmp/bonfire-master/example/assets/images/tiled/tileset/tileset1.8.tsj",
+        "E:/tmp/bonfire-master/example/assets/images/tiled/top_down/map.json",
+        "E:/tmp/bonfire-master/example/assets/images/tiled/top_down/tilesheet.json"
     ],
     "tileset.lastUsedFormat": "json",
     "tileset.tileSize": {
